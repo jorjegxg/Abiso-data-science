@@ -9,4 +9,5 @@ admin.initializeApp({
 // Get a Firestore instance
 const db = admin.firestore();
 
-getEmployeesFromLocation(db, "9ccc4930-64eb-11ee-addc-cbd93ef8d338");
+// getEmployeesFromLocation(db, "9ccc4930-64eb-11ee-addc-cbd93ef8d338");
+
