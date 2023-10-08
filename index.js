@@ -1,7 +1,7 @@
 var admin = require("firebase-admin");
 var serviceAccount = require("./smart-business-ro-firebase-adminsdk-idxlk-0228c799a9.json");
 
-var getEmployeesFromLocation = require("./lib/important/get_number_of_employees_from_location.js");
+var getNumberOfEmployeesFromCompany = require("./lib/la_final_de_luna/getNumberOfEmployeesFromCompany.js");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -9,5 +9,8 @@ admin.initializeApp({
 // Get a Firestore instance
 const db = admin.firestore();
 
-// getEmployeesFromLocation(db, "9ccc4930-64eb-11ee-addc-cbd93ef8d338");
-
+getNumberOfEmployeesFromCompany(db, "mpxcWADEI4ZAXOqwM4mo").then((result) => {
+  // console.log("Number of employees: ", result);
+  console.log("Number of employees: ", result.length);
+  console.log("Employees: ", result);
+});
